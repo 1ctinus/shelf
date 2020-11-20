@@ -1,0 +1,41 @@
+<html>
+  <head>
+  <style>
+    #ttl, #h {
+      width: 100%;
+font-size: 50px;
+    }
+    #h {
+      height: 3em;
+    }
+  </style>
+
+  </head>
+  <body>
+<h1>Friday Haiku Automater</h1>
+    <form>
+      <input type="text" id="ttl" name="fname" placeholder="Title" autocomplete="off"><br>
+      <textarea rows="3" type="text" id="h" name="h" autocomplete="off" placeholder="Haiku"></textarea><br><br>
+      <button value="Submit" onclick="generate()">Submit</button>
+    </form> 
+    <button  onclick="generate()">Submit</button>
+    <pre id="out"></pre>
+    <script>
+
+      function generate(){
+        var idk = document.getElementById("ttl").value;
+
+        var d = new Date();
+        var day = d.getDate();
+        var haiku = document.getElementById("h").value;
+        var  hai2= haiku.replace(/\n/g, "<br>");
+      var month  = d.getMonth() + 1;
+      var year = d.getFullYear();
+      var uri = '<h2><span class="date">'+month + '-' + day + '-' + year + '</span>~<span class="name">' + idk + '</span></h2><p>' + hai2 + "</p>";
+        var encode = encodeURI(uri)
+        document.getElementById("out").innerText = uri;
+      }
+    </script>
+    
+  </body>
+</html>

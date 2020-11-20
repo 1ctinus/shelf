@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="dem"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+let screenLog = document.querySelector('#demo');
+document.addEventListener('mousemove', logKey);
+
+function logKey(e) {
+  screenLog.innerText = `
+ ${e.screenX}, ${e.screenY}
+ ${e.clientX}, ${e.clientY}`;
+}
+</script>
+
+</body>
+</html>

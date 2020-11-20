@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="Dave" value="">
+<button onclick="search()">Search</button>
+<iframe    height="800" width="80%" id="myFrame">
+</iframe>
+<script>
+function search() {
+  var x = document.getElementById("Dave").value;
+  document.getElementById("myFrame").src = "https://davecode.me/other/" + x +".mp4";
+}
+document.body.addEventListener("keydown", function (event) {
+    if (event.keyCode ==13 ) {        
+        search();
+    }
+});
+</script>
+</body>
+</html>

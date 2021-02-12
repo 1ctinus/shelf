@@ -1,0 +1,35 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. HELLO.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-CNT PIC 9(3) VALUE 0.
+       01 FIZZ PIC 9(1).
+       01 BUZZ PIC 9(1).
+       01 FIZZBUZZ PIC 9(2).
+       01 DIV PIC 9(2).
+       01 DIV2 PIC 9(2).
+       01 DIV3 PIC 9(1).
+       PROCEDURE DIVISION.
+       A-PARA.
+       PERFORM B-PARA WITH TEST AFTER UNTIL WS-CNT>100.
+       STOP RUN.
+       
+       B-PARA.
+       DIVIDE WS-CNT BY 3 GIVING DIV REMAINDER FIZZ.
+       DIVIDE WS-CNT BY 5 GIVING DIV2 REMAINDER BUZZ.
+       DIVIDE WS-CNT BY 15 GIVING DIV3 REMAINDER FIZZBUZZ.
+       IF FIZZBUZZ = 0 THEN
+           DISPLAY 'FIZZBUZZ'
+       ELSE
+           EVALUATE TRUE
+             WHEN FIZZ = 0
+               DISPLAY 'FIZZ'
+             WHEN BUZZ = 0
+               DISPLAY 'BUZZ'
+             WHEN OTHER
+               DISPLAY WS-CNT
+           END-EVALUATE
+        END-IF.
+        ADD 1 TO WS-CNT.   
+

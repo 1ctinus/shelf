@@ -10,7 +10,7 @@ These languages vary, and include:
 - Go
 - Powershell
 - Python
-- Static HT<:
+- Static HTML
 ## Some Projects Include
 - 1upt.bat: Update my old [icon pack](https://github.com/1ctinus/1ct-pack)
 - dave.html: get a video from [dave carusos](https://davecode.me) site.
@@ -23,6 +23,14 @@ These languages vary, and include:
 - art.sh: ANSI art for programming languages, but realized that colors were a big issue and a lot of them were ugly and tedious to make.
 - meme.c: cli original version of mocker.c
 - lyrics.py: get a random bill wurtz lyrinc pre 2021.
+- readme.sh: update [this])(https://github.com/1ctinus/1ctinus)
+- scrabble.c: get a scrabble score from a string. 
+- calc.cpp: terrible calculator in C++
+- test.ps1: scrapped idea of making a zoom meeting joiner in Powershell, but eventually wrote it in Python.
+- print.ps1: because Powershell wasnt make for ascii art.
+- todo.sh: unnecessary and clunky todo list creator and editor in Bash.
+- haiku.html: created html for haikus to copy and paste. this is why yaml exists.
+- 
 ### COBOL programs (why?)
 - fizz.cob: fizzbuzz in COBOL
 - linux.cob: roasting you for your distro choice

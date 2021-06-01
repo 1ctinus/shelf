@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<audio controls src="https://billwurtz.com/Home_1.mp3">
+</audio>
+<audio controls src="https://billwurtz.com/long-long-long-journey.mp3">
+</audio>
+<audio controls src="https://billwurtz.com/precursor.mp3">
+</audio>
+<audio controls src="https://billwurtz.com/The%20Stupid%20Song.mp3">
+</audio>
+<audio controls src="https://billwurtz.com/im-crazy-its-raining.mp3">
+</audio>
+<script>
+var x, i
+x = document.querySelectorAll("audio")
+for (i = 0; i < x.length; i++) {
+ x[i].mozPreservesPitch = false
+ x[i].webkitPreservesPitch = false
+ x[i].preservesPitch = false
+  x[i].playbackRate = 0.84
+}
+</script> 
+</body> 
+</html>

@@ -1,0 +1,77 @@
+cat /priv/redacted.html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Tab</title>
+  <meta charset="UTF-8">
+  <style>
+    html {
+      background-color: #10121b;
+    }
+
+    * {
+      color: #eeeeff;
+      font-family: 'Noto Music', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 50px;
+    }
+
+    #flex-container {
+      display: grid;
+      flex-wrap: wrap;
+      grid-template-columns: auto auto auto;
+      justify-content: center;
+    }
+
+    #flex-container>div:hover {
+      background-color: rgb(85, 87, 199);
+      transform: scale(1.2, 1.2);
+      color: #fff;
+    }
+    #title {
+      text-align: center;
+    }
+    #flex-container>div {
+      background-color: #151826;
+      display: inline-block;
+      margin: 10px;
+      min-width: 40px;
+      text-align: center;
+      line-height: 75px;
+      border-radius: 10px;
+      font-size: 30px;
+      padding: 10px;
+      transition: 0.2s;
+      cursor: default;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">School New Tab Launcher</h1>
+  <div id="flex-container">
+  </div>
+  <script>
+    var list = [
+      { "name": "RED", "zoom": "", "classroom": "" },
+      { "name": "ACT", "zoom": "", "classroom": "" },
+      { "name": "EDR", "zoom": "", "classroom": "" },
+      { "name": "EDA", "zoom": "", "classroom": "" },
+      { "name": "CTE", "zoom": "", "classroom": "" },
+      { "name": "DRE", "zoom": "", "classroom": ""}]
+    for (i = 0; i < list.length; i++) {
+      var para = document.createElement("div");
+      para.innerHTML = `
+      <p>${list[i].name}</p>
+      <a  target="_blank" rel="noopener noreferrer"  href="${list[i].zoom}"><img
+          src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/7da16ace69efd85f872423687c3544ace78346ba/Papirus/32x32/apps/Zoom.svg" width="64px" height="64px"></a>
+      <a   target="_blank" rel="noopener noreferrer" href="${list[i].classroom}">
+        <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" width="64px" height="64px">
+      </a>`
+      document.getElementById("flex-container").appendChild(para);
+    }
+  </script>
+</body>
+
+</html>
